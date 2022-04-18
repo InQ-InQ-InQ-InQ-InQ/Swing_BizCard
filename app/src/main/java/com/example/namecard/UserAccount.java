@@ -9,6 +9,7 @@ public class UserAccount {
     private String password; // 비밀번호
     private String name; // 이름
     private String age; // 나이
+    private String phone;
 
     public UserAccount() {
     }
@@ -51,5 +52,21 @@ public class UserAccount {
 
     public void setAge(String age) {
         this.age = age;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public UserAccount(String name, String phone, String emailId, String age) {
+        this.name = name;
+        this.age = age;
+        this.phone = phone;
+        this.emailId = emailId;
+
     }
 }

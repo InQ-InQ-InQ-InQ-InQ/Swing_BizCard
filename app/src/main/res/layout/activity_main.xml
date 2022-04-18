@@ -6,6 +6,98 @@
     android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
+
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <ImageView
+            android:id="@+id/img_profile"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="이름 : "
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="전화번호 : "
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="나이 : "
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="이메일 : "
+                android:textSize="20dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="175dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/my_name"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="이거는 출력되나?"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/my_phone"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/my_age"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/my_email"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:textSize="20dp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!--로그아웃-->
     <Button
         android:id="@+id/btn_map"
         android:layout_width="0dp"
@@ -18,6 +110,7 @@
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/btn_delete_account" />
 
+    <!--계정탈퇴-->
     <Button
         android:id="@+id/btn_delete_account"
         android:layout_width="0dp"
@@ -45,6 +138,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--지도보기-->
     <Button
         android:id="@+id/btn_logout"
         android:layout_width="0dp"

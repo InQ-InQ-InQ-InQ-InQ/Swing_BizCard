@@ -5,6 +5,7 @@ package com.example.namecard;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -24,7 +25,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private FirebaseAuth mFirebaseAuth;       // 파이어베이스 인증
     private DatabaseReference mDatabaseRef;   // 실시간 데이터베이스
-    private EditText mEtEmail, mEtPwd, mEtName, mEtAge;        // 회원가입 입력 필드
+    private EditText mEtEmail, mEtPwd, mEtName, mEtAge, mEtPhone;        // 회원가입 입력 필드
     private Button mBtnRegister;              // 회원가입 버튼
 
     @Override
@@ -39,6 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
         mEtPwd = findViewById(R.id.et_password_clear);
         mEtName = findViewById(R.id.et_name_clear);
         mEtAge = findViewById(R.id.et_age_clear);
+        mEtPhone = findViewById(R.id.et_phone_clear);
         mBtnRegister = findViewById(R.id.btn_register_clear);
 
         mBtnRegister.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +52,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String strPassword = mEtPwd.getText().toString();
                 String strName = mEtName.getText().toString();
                 String strAge = mEtAge.getText().toString();
+                String strPhone = mEtPhone.getText().toString();
 
                 if (TextUtils.isEmpty(strName) || TextUtils.isEmpty(strEmail) ||
                         TextUtils.isEmpty(strPassword) || TextUtils.isEmpty(strAge)) {
@@ -69,11 +72,15 @@ public class RegisterActivity extends AppCompatActivity {
                             account.setPassword(strPassword);
                             account.setAge(strAge);
                             account.setName(strName);
+                            account.setPhone(strPhone);
 
                             // setValue : Database에 삽입
                             mDatabaseRef.child("UserAccount").child(firebaseUser.getUid()).setValue(account);
 
                             Toast.makeText(RegisterActivity.this, "회원가입에 성공하셨습니다", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                            startActivity(intent);
+                            finish();
                         }else if (task.getException() != null) { // 회원가입 실패시
                             Toast.makeText(RegisterActivity.this, "회원가입에 성공하셨습니다", Toast.LENGTH_SHORT).show();
                         }
