@@ -26,10 +26,11 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseReference databaseReference;
     private DataSnapshot dataSnapshot;
     private long backBtnTime=0;
-    private Button btn_logout, btn_delete_account, btn_map;
+
+    private Button btn_map, btn_option, btn_modify_profile;
     private TextView my_name, my_phone, my_email, my_age;
 
-    
+
     //뒤로가기 버튼 두 번 눌러야 앱 종료되게 하는 기능
     @Override
     public void onBackPressed() {
@@ -45,48 +46,29 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
 
-        btn_logout =findViewById(R.id.btn_logout);
-        btn_delete_account = findViewById(R.id.btn_delete_account);
-        btn_map = findViewById(R.id.btn_map);
-
         my_name = findViewById(R.id.my_name);
         my_phone = findViewById(R.id.my_phone);
         my_email = findViewById(R.id.my_email);
         my_age = findViewById(R.id.my_age);
 
-        my_email.setText(mFirebaseAuth.getCurrentUser().getEmail());
+
+        /*my_email.setText(mFirebaseAuth.getCurrentUser().getEmail());
         my_phone.setText(mFirebaseAuth.getCurrentUser().getPhoneNumber());
-        my_name.setText(mFirebaseAuth.getCurrentUser().getDisplayName());
+        my_name.setText(mFirebaseAuth.getCurrentUser().getDisplayName());*/
 
 
-        //로그아웃
-        btn_logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(intent);
-                mFirebaseAuth.signOut();
-                finish();
-            }
-        });
-
-        //계정탈퇴 근데 지금 작동을 안함, 이유를 모르겠음
-        btn_delete_account.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mFirebaseAuth.getCurrentUser().delete();
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+        btn_map = findViewById(R.id.btn_map);
+        btn_option = findViewById(R.id.btn_option);
+        btn_modify_profile = findViewById(R.id.btn_modify_profile);
 
         //구글 맵으로 이동
         btn_map.setOnClickListener(new View.OnClickListener() {
@@ -94,6 +76,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(MainActivity.this, MapActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_option.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, OptionActivity.class);
                 startActivity(intent);
             }
         });
