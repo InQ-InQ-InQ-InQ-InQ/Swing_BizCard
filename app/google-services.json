@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "646173231721",
+    "project_id": "namecard-929ae",
+    "storage_bucket": "namecard-929ae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:646173231721:android:1b864c0924dc6af6a9f0f8",
+        "android_client_info": {
+          "package_name": "com.example.namecard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "646173231721-h644guqcjsevvpj8fi7sbhv4inoq1gne.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRjPjUSuGzpDwBDZe_oVyDBNP-UrgyB7c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "646173231721-h644guqcjsevvpj8fi7sbhv4inoq1gne.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
