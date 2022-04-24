@@ -99,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         // ShakeDetector initialization
+        // 흔들림 인식 기능 파트
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         mAccelerometer = mSensorManager
                 .getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
@@ -107,6 +108,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onShake(int count) {
                 //감지시 할 작업 작성
+                //일단은 맵 액티비티로 인동하게 해놨음
+                //하다보니까 맵에서 유저들 정보 받아오는 건 무리일 거 같고 흔들면 명함교환 qr코드나 링크 띄워지게 하는 게 나을 것 같음
+                //qr코드도 만들기 좀 어려울 것 같다...
                 Intent intent = new Intent(MainActivity.this, MapActivity.class);
                 startActivity(intent);
             }
