@@ -3,7 +3,10 @@ package com.example.namecard;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.hardware.Sensor;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -30,8 +33,12 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_map, btn_option, btn_modify_profile;
     private TextView my_name, my_phone, my_email, my_age;
 
+    private SensorManager mSensorManager;
+    private Sensor mAccelerometer;
+    private ShakeDetector mShakeDetector;
 
-    //뒤로가기 버튼 두 번 눌러야 앱 종료되게 하는 기능
+
+    // 뒤로가기 버튼 두 번 눌러야 앱 종료되게 하는 기능
     @Override
     public void onBackPressed() {
         long curTime = System.currentTimeMillis();
@@ -70,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         btn_option = findViewById(R.id.btn_option);
         btn_modify_profile = findViewById(R.id.btn_modify_profile);
 
-        //구글 맵으로 이동
+        // 구글 맵으로 이동
         btn_map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -80,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // 옵션으로 이동
         btn_option.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -90,6 +98,36 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        // ShakeDetector initialization
+        mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        mAccelerometer = mSensorManager
+                .getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        mShakeDetector = new ShakeDetector();
+        mShakeDetector.setOnShakeListener(new ShakeDetector.OnShakeListener() {
+            @Override
+            public void onShake(int count) {
+                //감지시 할 작업 작성
+                Intent intent = new Intent(MainActivity.this, MapActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        // Add the following line to register the Session Manager Listener onResume
+        mSensorManager.registerListener(mShakeDetector, mAccelerometer,    SensorManager.SENSOR_DELAY_UI);
+    }
+    // background 상황에서도 흔들림을 감지하고 적용할 필요는 없다
+    @Override
+    public void onPause() {
+        // Add the following line to unregister the Sensor Manager onPause
+        mSensorManager.unregisterListener(mShakeDetector);
+        super.onPause();
+    }
+
 }
+
