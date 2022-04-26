@@ -4,6 +4,7 @@ package com.example.namecard;
 
 public class UserAccount {
 
+    private String profile;
     private String idToken; // Firebase uid (고유 토큰정보)
     private String emailId; // 이메일 아이디
     private String password; // 비밀번호
@@ -12,6 +13,14 @@ public class UserAccount {
     private String phone;
 
     public UserAccount() {
+    }
+
+    public String getProfile() {
+        return profile;
+    }
+
+    public void setProfile(String profile) {
+        this.profile = profile;
     }
 
     public String getIdToken() {
