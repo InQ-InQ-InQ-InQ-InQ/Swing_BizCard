@@ -2,6 +2,8 @@ package com.example.namecard;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
@@ -21,7 +23,10 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,6 +41,12 @@ public class MainActivity extends AppCompatActivity {
     private SensorManager mSensorManager;
     private Sensor mAccelerometer;
     private ShakeDetector mShakeDetector;
+
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
+    private ArrayList<UserAccount> arrayList;
+    private FirebaseDatabase database;
 
 
     // 뒤로가기 버튼 두 번 눌러야 앱 종료되게 하는 기능
@@ -116,6 +127,40 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        // 친구 명함 목록 파트  -> 리사이클러뷰로 해보려고 했는데 잘 안돼서 일단 주석처리 해놓고 보류
+        recyclerView = findViewById(R.id.recycler_View); //아이디 연결
+        recyclerView.setHasFixedSize(true); //리사이클러뷰 기존 성능 강화
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+        arrayList = new ArrayList<>(); // User 객체를 담을 어레이 리스트
+
+        database = FirebaseDatabase.getInstance(); //파이어베이스 데이터베이스 연동
+
+        databaseReference = database.getReference("UserAccount");
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                //파이어베이스 데이터베이스의 데이터를 받아오는 곳
+                arrayList.clear(); // 기존 배열리스트가 존재하지 않게 초기화
+                for(DataSnapshot snapshot : dataSnapshot.getChildren()){ // 반복문으로 데이터 리스트를 추출
+                    UserAccount userAccount = snapshot.getValue(UserAccount.class); // 만들어뒀던 UserAccount 객체에 데이터를 담는다
+                    arrayList.add(userAccount); // 담은 데이터들을 배열리스트에 넣고 리사이클러뷰로 보내줌
+
+                }
+                adapter.notifyDataSetChanged(); // 리스트 저장 및 새로고침
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) { //입력안해도 됨
+                // 디비를 가져오던 중 에러 발생시 뭐를 띄워줄건지
+                Log.e("MainActivity", String.valueOf(error.toException())); //에러문 출력
+
+            }
+        });
+
+        adapter = new CustomAdapter(arrayList, this);
+        recyclerView.setAdapter(adapter); // 리사이클러뷰에 어댑터 연결
 
     }
 
