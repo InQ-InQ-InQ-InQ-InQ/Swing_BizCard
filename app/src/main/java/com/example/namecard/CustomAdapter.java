@@ -71,9 +71,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
             this.my_phone = itemView.findViewById(R.id.my_phone);
             this.my_email = itemView.findViewById(R.id.my_email);
 
-
-
-
         }
     }
 }
