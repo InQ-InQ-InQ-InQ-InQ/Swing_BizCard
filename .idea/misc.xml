@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/hath8/AndroidStudioProjects/Swing_BizCard/app/src/main/res/drawable/menu_item_color.xml" value="0.2695" />
+        <entry key="..\:/Users/hath8/AndroidStudioProjects/Swing_BizCard/app/src/main/res/layout/activity_info.xml" value="0.16944444444444445" />
+        <entry key="..\:/Users/hath8/AndroidStudioProjects/Swing_BizCard/app/src/main/res/layout/activity_login.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/hath8/AndroidStudioProjects/Swing_BizCard/app/src/main/res/layout/activity_main.xml" value="0.15020263424518743" />
+        <entry key="..\:/Users/hath8/AndroidStudioProjects/Swing_BizCard/app/src/main/res/layout/activity_map.xml" value="0.16944444444444445" />
+        <entry key="..\:/Users/hath8/AndroidStudioProjects/Swing_BizCard/app/src/main/res/layout/activity_option.xml" value="0.16944444444444445" />
+        <entry key="..\:/Users/hath8/AndroidStudioProjects/Swing_BizCard/app/src/main/res/layout/activity_register.xml" value="0.16944444444444445" />
+        <entry key="..\:/Users/hath8/AndroidStudioProjects/Swing_BizCard/app/src/main/res/layout/fragment_home.xml" value="0.17028985507246377" />
+        <entry key="..\:/Users/hath8/AndroidStudioProjects/Swing_BizCard/app/src/main/res/layout/fragment_search.xml" value="0.26458333333333334" />
+        <entry key="..\:/Users/hath8/AndroidStudioProjects/Swing_BizCard/app/src/main/res/layout/fragment_user.xml" value="0.26458333333333334" />
+        <entry key="..\:/Users/hath8/AndroidStudioProjects/Swing_BizCard/app/src/main/res/layout/layout_home.xml" value="0.26458333333333334" />
+        <entry key="..\:/Users/hath8/AndroidStudioProjects/Swing_BizCard/app/src/main/res/layout/list_item.xml" value="0.25" />
+        <entry key="..\:/Users/hath8/AndroidStudioProjects/Swing_BizCard/app/src/main/res/layout/list_item_hj.xml" value="0.16944444444444445" />
+        <entry key="..\:/Users/hath8/AndroidStudioProjects/Swing_BizCard/app/src/main/res/menu/bot_navi_menu.xml" value="0.26458333333333334" />
+        <entry key="..\:/Users/hath8/AndroidStudioProjects/Swing_BizCard_mm/app/src/main/res/layout/activity_main.xml" value="0.26458333333333334" />
+        <entry key="..\:/Users/hath8/AndroidStudioProjects/Swing_BizCard_mm/app/src/main/res/layout/activity_map.xml" value="0.1" />
+        <entry key="..\:/Users/hath8/AndroidStudioProjects/Swing_BizCard_mm/app/src/main/res/layout/activity_option.xml" value="0.21195652173913043" />
+        <entry key="..\:/Users/hath8/AndroidStudioProjects/Swing_BizCard_mm/app/src/main/res/layout/activity_register.xml" value="0.25" />
+        <entry key="..\:/Users/hath8/AndroidStudioProjects/Swing_BizCard_mm/app/src/main/res/layout/activity_share.xml" value="0.30055579307396324" />
+        <entry key="..\:/Users/hath8/AndroidStudioProjects/Swing_BizCard_mm/app/src/main/res/layout/backup_activity_main.xml" value="0.18084651560495937" />
+        <entry key="..\:/Users/hath8/AndroidStudioProjects/Swing_BizCard_mm/app/src/main/res/layout/ff_activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/hath8/AndroidStudioProjects/Swing_BizCard_mm/app/src/main/res/layout/fragment_blank.xml" value="0.2654980761008978" />
+        <entry key="..\:/Users/hath8/AndroidStudioProjects/Swing_BizCard_mm/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/hath8/AndroidStudioProjects/Swing_BizCard_mm/app/src/main/res/layout/fragment_search.xml" value="0.2" />
+        <entry key="..\:/Users/hath8/AndroidStudioProjects/Swing_BizCard_mm/app/src/main/res/layout/fragment_user.xml" value="0.291213768115942" />
+        <entry key="..\:/Users/hath8/AndroidStudioProjects/Swing_BizCard_mm/app/src/main/res/layout/testpage.xml" value="0.2171868319794784" />
+        <entry key="..\:/Users/hath8/AndroidStudioProjects/Swing_BizCard_mm/app/src/main/res/layout/textpage.xml" value="0.2654980761008978" />
+        <entry key="..\:/Users/hath8/AndroidStudioProjects/Swing_BizCard_mm/app/src/main/res/menu/bot_navi_menu.xml" value="0.26458333333333334" />
+        <entry key="..\:/Users/khy00/AndroidStudioProjects/NameCard/app/src/main/res/drawable/gradient.xml" value="0.265625" />
+        <entry key="..\:/Users/khy00/AndroidStudioProjects/NameCard/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.16030789825970548" />
+        <entry key="..\:/Users/khy00/AndroidStudioProjects/NameCard/app/src/main/res/layout/activity_create_qr.xml" value="0.2259963768115942" />
+        <entry key="..\:/Users/khy00/AndroidStudioProjects/NameCard/app/src/main/res/layout/activity_home.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/khy00/AndroidStudioProjects/NameCard/app/src/main/res/layout/activity_info.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/khy00/AndroidStudioProjects/NameCard/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/Users/khy00/AndroidStudioProjects/NameCard/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/khy00/AndroidStudioProjects/NameCard/app/src/main/res/layout/activity_map.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/khy00/AndroidStudioProjects/NameCard/app/src/main/res/layout/activity_option.xml" value="0.23489583333333333" />
+        <entry key="..\:/Users/khy00/AndroidStudioProjects/NameCard/app/src/main/res/layout/activity_register.xml" value="0.264" />
+        <entry key="..\:/Users/khy00/AndroidStudioProjects/NameCard/app/src/main/res/layout/list_item.xml" value="0.264" />
+        <entry key="..\:/Users/khy00/Desktop/Swing_BizCard-botnav_jh/app/src/main/res/layout/activity_main.xml" value="0.21739130434782608" />
+        <entry key="..\:/Users/khy00/Desktop/Swing_BizCard-botnav_jh/app/src/main/res/layout/activity_map.xml" value="0.21739130434782608" />
+        <entry key="..\:/Users/khy00/Desktop/Swing_BizCard-botnav_jh/app/src/main/res/layout/backup_activity_main.xml" value="0.21739130434782608" />
+        <entry key="..\:/Users/khy00/Desktop/Swing_BizCard-botnav_jh/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Users/khy00/Desktop/Swing_BizCard-botnav_jh/app/src/main/res/layout/fragment_search.xml" value="0.21739130434782608" />
+        <entry key="..\:/Users/khy00/Desktop/Swing_BizCard-botnav_jh/app/src/main/res/layout/fragment_user.xml" value="0.21739130434782608" />
+        <entry key="..\:/Users/khy00/Desktop/Swing_BizCard-botnav_jh/app/src/main/res/layout/list_item.xml" value="0.21739130434782608" />
+        <entry key="..\:/Users/khy00/Desktop/Swing_BizCard-botnav_jh/app/src/main/res/menu/bot_navi_menu.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/khy00/Desktop/Swing_BizCard-test_jh/app/src/main/res/layout/activity_login.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/khy00/Desktop/Swing_BizCard-test_jh/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/khy00/Desktop/Swing_BizCard-test_jh/app/src/main/res/layout/activity_register.xml" value="0.2223731884057971" />
+        <entry key="..\:/Users/khy00/Desktop/Swing_BizCard-test_jh/app/src/main/res/layout/activity_share.xml" value="0.2" />
+        <entry key="..\:/Users/khy00/Desktop/Swing_BizCard-test_jh/app/src/main/res/layout/list_item.xml" value="0.21875" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
